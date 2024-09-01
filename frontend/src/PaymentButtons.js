@@ -5,7 +5,7 @@ const PaymentButtons = () => {
 	const handlePayment = async amount => {
 		try {
 			// Call the backend to get the payment URL
-			const response = await axios.post('http://localhost:5001/pay', { amount })
+			const response = await axios.post('https://hot-pay-strona-new.vercel.app/pay', { amount })
 			const { url } = response.data
 
 			// Redirect to the HotPay payment URL
